@@ -50,10 +50,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Specify the Node.js version you need
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm ci # This assumes you have a package-lock.json file
+        run: |
+          npm install eslint@8.57.1 --save-dev
+          npm ci --legacy-peer-deps
 
       - name: Run Migrations
         run: npm run db:migrate
