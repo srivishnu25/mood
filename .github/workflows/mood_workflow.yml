@@ -42,7 +42,7 @@ jobs:
           project_id: ${{ vars.NEON_PROJECT_ID }}
           branch_name: preview/pr-${{ github.event.number }}-${{ needs.setup.outputs.branch }}
           api_key: ${{ secrets.NEON_API_KEY }}
-          database_name: mood_db
+          database: mood_db
 
       - name: Checkout code
         uses: actions/checkout@v3
