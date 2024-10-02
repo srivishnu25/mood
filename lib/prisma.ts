@@ -10,6 +10,7 @@ const prismaClientSingleton = () => {
   })
   return new PrismaClient({
     adapter: new PrismaNeon(pool),
+    // log: ['query'],
   })
 }
 

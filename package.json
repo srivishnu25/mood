@@ -7,10 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:migrate": "npx prisma migrate dev"
+    "db:migrate": "npx prisma migrate dev",
+    "test": "vitest"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.6.1",
+    "@langchain/cohere": "^0.3.0",
+    "@langchain/core": "^0.3.3",
+    "@langchain/groq": "^0.1.2",
     "@neondatabase/serverless": "^0.9.5",
     "@prisma/adapter-neon": "^5.20.0",
     "@prisma/client": "^5.20.0",
@@ -18,19 +22,29 @@
     "@types/react": "18.3.9",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.20",
-    "eslint": "9.11.1",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
+    "groq-sdk": "^0.7.0",
+    "langchain": "^0.3.2",
     "next": "14.2.13",
     "postcss": "8.4.47",
     "react": "18.3.1",
+    "react-autosave": "^0.4.4",
     "react-dom": "18.3.1",
+    "recharts": "^2.12.7",
     "tailwindcss": "3.4.13",
     "typescript": "5.6.2",
-    "ws": "^8.18.0"
+    "ws": "^8.18.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
     "@types/ws": "^8.5.12",
+    "@vitejs/plugin-react-swc": "^3.7.1",
     "bufferutil": "^4.0.8",
-    "prisma": "^5.20.0"
+    "jsdom": "^25.0.1",
+    "prisma": "^5.20.0",
+    "vitest": "^2.1.1"
   }
 }
